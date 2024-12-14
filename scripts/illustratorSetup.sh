@@ -62,24 +62,17 @@ function main() {
 }
 
 function install_illustratorCC() {
-    local filename="illustratorCC17.tgz"
-    local filemd5="d470b541cef1339a66ea33a998801f83"
-    # local filelink="http://127.0.0.1:4050/illustratorCC17.tgz"
-    local filelink="https://victor.poshtiban.io/p/gictor/illustratorCC/illustratorCC17.tgz"
-    local filepath="$CACHE_PATH/$filename"
-
-    download_component $filepath $filemd5 $filelink $filename
+    local filelink="/home/$USER/Downloads/illustratorCC17.tgz"
 
     echo "===============| IllustratorCC17 |===============" >> "$SCR_PATH/wine-error.log"
 
     show_message "extract IllustratorCC..."
     rmdir_if_exist "$SCR_PATH/IllustratorCC17"
-    tar -xzf "$filepath" -C "$SCR_PATH" || error "sorry something went wrong during illustrator installation"
+    tar -xzf "$filelink" -C "$SCR_PATH" || error "sorry something went wrong during illustrator installation"
 
     show_message "install Illustrator..."
 
     show_message "IllustratorCC v17 x64 installed..."
-    unset filename filemd5 filelink filepath
 }
 
 check_arg $@
