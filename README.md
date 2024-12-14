@@ -11,6 +11,10 @@
 # Illustrator CC Installer for Linux
 This bash script helps you to install `Adobe Illustrator CC` on your Linux distro easily. It will download a free version of Illustrator and tries to run it using `wine` installed on your system
 
+## Fixes @ 14th December 2024
+- wine64 -> wine : allow `launcher.sh` to launch your App.
+- remote host -> local host installer : just download the tgz file into `~/Download` and run `./setup.sh` as usual.
+
 ## :rocket: Features
 * illustrator command
 * desktop entry
